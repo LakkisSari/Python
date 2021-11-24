@@ -1,11 +1,7 @@
-password_set = False
-while not password_set:
-    count = 0
-    password = input("Enter a password: ")
-    for x in password:
-        count = count + 1
-    if count < 8:
-        print("Your password size must be at least 8 characters!")
-    else:
-        password_set = True
-print("Your password is accepted!")
+total = 0.0
+price = float(input("Enter price(negative value to stop): "))
+while price >= 0:
+    number = int(input("Enter the number of items: "))
+    total += price*number
+    price = float(input("Enter the item price: "))
+print("The total price is:", str(total))
